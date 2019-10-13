@@ -1,7 +1,7 @@
 # 2d-BrowserGame
 Live version: https://2d-jump-game.000webhostapp.com/index.php
 
-Control: with the space key.<br>
+Control: using the space key.<br>
 Jump over the red squares that come towards you and gain a high score. <br>
 The game end when the player collide with one of the red squares. The speed of the squares is random.
 
