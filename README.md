@@ -1,1 +1,29 @@
-"# 2d-BrowserGame" 
+# 2d-BrowserGame
+Live version: https://2d-jump-game.000webhostapp.com/index.php
+
+Control: with the space key.<br>
+Jump over the red squares that come towards you and gain a high score. <br>
+The game end when the player collide with one of the red squares. The speed of the squares is random.
+
+![alt text](https://imgur.com/5rAzxOg.png)
+
+# Set-up the database for leaderboard
+Database Table:<br>
+top_users[id, name, score]<br>
+id: INT, Primary Key<br>
+name: VARCHAR<br>
+score: INT<br>
+
+Edit dbh file: includes => dbh.php
+
+$dbServerName = ""; //Your database name<br>
+$dbUsername = "root"; // Your database username <br>
+$dbPassword = ""; //Your database password <br>
+$dbName = ""; // Your database name <br>
+
+$dsn = "mysql:host=localhost;dbname=yourDbName;charset=utf8mb4";
+
+# Top 5 users
+![alt-text](https://imgur.com/cHkiv1L.png)
+
+$sql = "SELECT id, name, score FROM top_users ORDER BY score DESC LIMIT 5";
