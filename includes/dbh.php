@@ -1,11 +1,11 @@
 <?php
 
 $dbServerName = "localhost";
-$dbUsername = "id11190698_root";
-$dbPassword = "1234567890";
-$dbName = "id11190698_2d_game";
+$dbUsername = "root";
+$dbPassword = "";
+$dbName = "yourDbName";
 
-$dsn = "mysql:host=localhost;dbname=id11190698_2d_game;charset=utf8mb4";
+$dsn = "mysql:host=localhost;dbname=yourDbName;charset=utf8mb4";
 
 $options = [
   PDO::ATTR_EMULATE_PREPARES   => false, // turn off emulation mode for "real" prepared statements
@@ -13,7 +13,7 @@ $options = [
   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, //make the default fetch be an associative array
 ];
 try {
-  $pdo = new PDO($dsn, "id11190698_root", "1234567890", $options);
+  $pdo = new PDO($dsn, "root", "", $options);
 } catch (Exception $e) {
   error_log($e->getMessage());
   exit('Something weird happened');
