@@ -1,0 +1,39 @@
+* {
+  box-sizing:border-box;
+  margin:0;
+}
+
+html, body {
+  height:100%;
+  width:100%;
+}
+
+body {
+  align-content:space-around;
+  background-color:#202830;
+  color:#ffffff;
+  display:grid;
+  justify-content:center;
+}
+
+body p {
+  text-align: center;
+}
+
+canvas {
+  background-color:#ffffff;
+}
+
+.top {
+  display:inline-block
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+}
