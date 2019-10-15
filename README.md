@@ -3,7 +3,7 @@ Live version: https://2d-jump-game.000webhostapp.com/index.php
 
 Control: using the space key.<br>
 Jump over the red squares that come towards you and gain a high score. <br>
-The game end when the player collide with one of the red squares. The speed of the squares is random.
+The game end when the player collide with one of the red squares.
 
 ![alt text](https://imgur.com/5rAzxOg.png)
 
