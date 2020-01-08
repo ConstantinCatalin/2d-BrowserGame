@@ -16,7 +16,7 @@ score: INT<br>
 
 Edit dbh file: includes => dbh.php
 
-$dbServerName = ""; //Your database name<br>
+$dbServerName = ""; // localhost<br>
 $dbUsername = "root"; // Your database username <br>
 $dbPassword = ""; //Your database password <br>
 $dbName = ""; // Your database name <br>
