@@ -12,9 +12,9 @@ player = {
   height:32,
   jumping:true,
   width:32,
-  x:320, // center of the canvas
+  x:320, // center
   x_velocity:0,
-  y:200,
+  y:280,
   y_velocity:0
 };
 
@@ -51,7 +51,7 @@ function myFunction() {
   }
 }
 
-var speed = 1;
+var speed = 0.9;
 var friction = 0.9;
 var gravity = 1.5;
 
@@ -60,6 +60,18 @@ loop = function() {
   if (controller.up && player.jumping == false) {
     player.y_velocity -= 18;
     player.jumping = true;
+  }
+  if (player.jumping == true && obj.collision) {
+    //reset
+    console.log("reset!!!!");
+    player.x=320;
+    player.y=280;
+    distance=0;
+    obj.collision=false;
+    obj.x=640;
+    speed=0.6;
+    friction=0.9;
+    document.getElementById("game_over").innerHTML = "Use Space button to jump.";
   }
 
   obj.x_velocity -= speed;
@@ -77,10 +89,12 @@ loop = function() {
   if(obj.x < player.x + 32 && obj.x > player.x - 32 && player.y >= obj.y-32){
     //console.log("colision detected!");
     obj.collision = true;
+    document.getElementById("game_over").innerHTML = "GAME OVER!";
   }
   if(!obj.collision){
     distance=distance + 0.05;
     document.getElementById("distance").innerHTML = parseInt(distance);
+    document.getElementById("score").value = distance;
   }else{
       speed = 0;
       friction=0.5;
@@ -144,7 +158,6 @@ loop = function() {
   context.lineTo(640, 353);
   context.stroke();
 
-  // call update when the browser is ready to draw again
   window.requestAnimationFrame(loop);
 };
 
