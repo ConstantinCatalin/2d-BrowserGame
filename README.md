@@ -1,5 +1,5 @@
 # 2d-BrowserGame
-Live version: https://2d-jump-game.000webhostapp.com/index.php
+Live version: http://2dgame.unaux.com/index.php
 
 Control: using the space key.<br>
 Jump over the red squares that come towards you and gain a high score. <br>
